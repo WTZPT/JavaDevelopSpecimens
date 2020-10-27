@@ -1,8 +1,6 @@
 package com.example.specimens.BeanUtil;
 
-
-
-import java.awt.Container;
+import com.example.specimens.BeanUtil.Container;
 
 public class Main {
 
@@ -12,6 +10,8 @@ public class Main {
         try{
             Object o = BeanUtils.getProperty(container,"name");
             System.out.println(o);
+            BeanUtils.setProperty(container,"name","yyyyyyy");
+            System.out.println(container.toString());
         } catch (NoSuchFieldException e) {
             e.printStackTrace();
         }
